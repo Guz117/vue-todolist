@@ -35,10 +35,16 @@ var app = new Vue({
     },
     methods: {
         aggiungiImpegno: function () {
-            let impegno = {
-                text: this.nuovoImpegno
+            if (this.nuovoImpegno.legth != 0) {
+                let impegno = {
+                    text: this.nuovoImpegno
+                }
+                this.impegni.unshift(impegno);
+                this.nuovoImpegno = ''
             }
-            this.impegni.push(impegno)
+        },
+        cancellaImpegno: function (index) {
+            this.impegni.splice(index, 1)
         }
     }
     

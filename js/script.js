@@ -19,6 +19,17 @@ che quindi viene aggiunto alla lista dei todo esistenti.
 var app = new Vue({
     el: '#app',
     data: {
+        impegni: [
+            {
+                text: 'Vai a fare la spesa',
+            },
+            {
+                text: 'Passa dalla posta per il reso',
+            },
+            {
+                text: 'Ricordati i regali di Natale',
+            },
+        ]
       
     }
   })

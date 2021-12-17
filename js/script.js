@@ -23,12 +23,15 @@ var app = new Vue({
         impegni: [
             {
                 text: 'Vai a fare la spesa',
+                done: false
             },
             {
                 text: 'Passa dalla posta per il reso',
+                done: false
             },
             {
                 text: 'Ricordati i regali di Natale',
+                done: false
             },
         ]
       
@@ -37,7 +40,8 @@ var app = new Vue({
         aggiungiImpegno: function () {
             if (this.nuovoImpegno.length != 0) {
                 let impegno = {
-                    text: this.nuovoImpegno
+                    text: this.nuovoImpegno,
+                    done: false
                 }
                 this.impegni.unshift(impegno);
                 this.nuovoImpegno = ''
@@ -46,6 +50,7 @@ var app = new Vue({
         cancellaImpegno: function (index) {
             this.impegni.splice(index, 1)
         }
+        
     }
     
   })

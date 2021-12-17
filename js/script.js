@@ -19,6 +19,7 @@ che quindi viene aggiunto alla lista dei todo esistenti.
 var app = new Vue({
     el: '#app',
     data: {
+        nuovoImpegno: '',
         impegni: [
             {
                 text: 'Vai a fare la spesa',
@@ -31,5 +32,14 @@ var app = new Vue({
             },
         ]
       
+    },
+    methods: {
+        aggiungiImpegno: function () {
+            let impegno = {
+                text: this.nuovoImpegno
+            }
+            this.impegni.push(impegno)
+        }
     }
+    
   })

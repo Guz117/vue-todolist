@@ -22,3 +22,7 @@ html {
     background-color: ivory;
     border-radius: 10px;
 }
+
+.impegno {
+    display: flex;
+}

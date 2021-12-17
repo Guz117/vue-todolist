@@ -35,7 +35,7 @@ var app = new Vue({
     },
     methods: {
         aggiungiImpegno: function () {
-            if (this.nuovoImpegno.legth != 0) {
+            if (this.nuovoImpegno.length != 0) {
                 let impegno = {
                     text: this.nuovoImpegno
                 }

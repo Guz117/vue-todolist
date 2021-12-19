@@ -26,7 +26,8 @@
                 </div>
                 <div class="impegni">
                     <ul>
-                        <li v-for="(impegno, index) in impegni" class="impegno">
+                        <li v-for="(impegno, index) in impegni" :key="index" class="impegno" :class="(impegno.done == true) ? 'text' : ''">
+                            <input @click="check(index)" :checked="impegno.done" type="checkbox" id="scales" name="scales">
                             <h3>{{ impegno.text }}</h3>
                             <i @click="cancellaImpegno(index)" class="fas fa-times-circle"></i>
                         </li>

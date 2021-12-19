@@ -49,7 +49,11 @@ var app = new Vue({
         },
         cancellaImpegno: function (index) {
             this.impegni.splice(index, 1)
+        },
+        check: function (index) {
+            this.impegni[index].done = !this.impegni[index].done
         }
+
         
     }
     
